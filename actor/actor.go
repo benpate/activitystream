@@ -1,44 +1,48 @@
 package actor
 
+import "github.com/benpate/activitystream"
+
 // Application returns an `Actor` object of type `Application`
-func Application(name string) Object {
+func Application(name string) activitystream.Object {
 	return Object{
-		Context: ContextActivityStreams(),
-		Type:    ActorTypeApplication,
+		Context: activitystream.ContextDefault(),
+		Type:    TypeApplication,
 		Name:    name,
 	}
 }
 
 // Group returns an `Actor` object of type `Group`
-func Group(name string) Object {
+func Group(name string) activitystream.Object {
 	return Object{
-		Context: ContextActivityStreams(),
-		Type:    ActorTypeGroup,
+		Context: activitystream.ContextDefault(),
+		Type:    TypeGroup,
 		Name:    name,
 	}
 }
 
 // Organization returns an `Actor` object of type `Organization`
-func Organization(name string) Object {
+func Organization(name string) activitystream.Object {
 	return Object{
-		Context: ContextActivityStreams(),
-		Type:    ActorTypeOrganization,
+		Context: activitystream.ContextDefault(),
+		Type:    TypeOrganization,
 		Name:    name,
 	}
 }
 
-func Person(name string) Object {
+// Person represents an individual person.
+func Person(name string) activitystream.Object {
 	return Object{
-		Context: ContextActivityStreams(),
-		Type:    ActorTypePerson,
+		Context: activitystream.ContextDefault(),
+		Type:    TypePerson,
 		Name:    name,
 	}
 }
 
-func Service(name string) Object {
+// Service represents a service of any kind
+func Service(name string) activitystream.Object {
 	return Object{
-		Context: ContextActivityStreams(),
-		Type:    ActorTypeService,
+		Context: activitystream.ContextDefault(),
+		Type:    TypeService,
 		Name:    name,
 	}
 }
