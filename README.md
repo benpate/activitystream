@@ -1,4 +1,4 @@
-# ActivityStream
+# ActivityStream 🏞
 
 ## Welcome to the Fediverse
 
