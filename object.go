@@ -1,4 +1,4 @@
-package model
+package activitystream
 
 import "time"
 
@@ -25,8 +25,8 @@ type Object struct {
 	ContentMap   map[string]string `json:",omitempty"` // The content MAY be expressed using multiple language-tagged values.
 	EndTime      time.Time         `json:",omitempty"` // The date and time describing the actual or expected ending time of the object. When used with an Activity object, for instance, the endTime property specifies the moment the activity concluded or is expected to conclude.
 	Generator    *Object           `json:",omitempty"` // Identifies the entity (e.g. an application) that generated the object.
-	Icon         *ImageOrLink      `json:",omitempty"` // Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one (horizontal) to one (vertical) and should be suitable for presentation at a small size.
-	Image        *ImageOrLink      `json:",omitempty"` // Indicates an entity that describes an image for this object. Unlike the icon property, there are no aspect ratio or display size limitations assumed.
+	Icon         *Object           `json:",omitempty"` // Indicates an entity that describes an icon for this object. The image should have an aspect ratio of one (horizontal) to one (vertical) and should be suitable for presentation at a small size.
+	Image        *Object           `json:",omitempty"` // Indicates an entity that describes an image for this object. Unlike the icon property, there are no aspect ratio or display size limitations assumed.
 	InReplyTo    *Object           `json:",omitempty"` // Indicates one or more entities for which this object is considered a response.
 	Instrument   *Object           `json:",omitempty"` // Identifies one or more objects used (or to be used) in the completion of an Activity.
 	Location     *Location         `json:",omitempty"` // Indicates one or more physical or logical locations associated with the object.

@@ -1,4 +1,4 @@
-package model
+package activitystream
 
 type Collection struct {
 	Object
