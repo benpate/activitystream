@@ -5,7 +5,7 @@ import "github.com/benpate/activitystream"
 // Application returns an `Actor` object of type `Application`
 func Application(name string) activitystream.Object {
 	return Object{
-		Context: activitystream.ContextDefault(),
+		Context: activitystream.DefaultContext(),
 		Type:    TypeApplication,
 		Name:    name,
 	}
@@ -14,7 +14,7 @@ func Application(name string) activitystream.Object {
 // Group returns an `Actor` object of type `Group`
 func Group(name string) activitystream.Object {
 	return Object{
-		Context: activitystream.ContextDefault(),
+		Context: activitystream.DefaultContext(),
 		Type:    TypeGroup,
 		Name:    name,
 	}
@@ -23,7 +23,7 @@ func Group(name string) activitystream.Object {
 // Organization returns an `Actor` object of type `Organization`
 func Organization(name string) activitystream.Object {
 	return Object{
-		Context: activitystream.ContextDefault(),
+		Context: activitystream.DefaultContext(),
 		Type:    TypeOrganization,
 		Name:    name,
 	}
@@ -32,7 +32,7 @@ func Organization(name string) activitystream.Object {
 // Person represents an individual person.
 func Person(name string) activitystream.Object {
 	return Object{
-		Context: activitystream.ContextDefault(),
+		Context: activitystream.DefaultContext(),
 		Type:    TypePerson,
 		Name:    name,
 	}
@@ -41,7 +41,7 @@ func Person(name string) activitystream.Object {
 // Service represents a service of any kind
 func Service(name string) activitystream.Object {
 	return Object{
-		Context: activitystream.ContextDefault(),
+		Context: activitystream.DefaultContext(),
 		Type:    TypeService,
 		Name:    name,
 	}

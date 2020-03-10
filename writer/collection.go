@@ -12,7 +12,7 @@ type Collection struct {
 	Current    string   `json:"current,omitempty"`    // In a paged Collection, indicates the page that contains the most recently updated member items.
 	First      string   `json:"first,omitempty"`      // In a paged Collection, indicates the furthest preceeding page of items in the collection.
 	Last       string   `json:"last,omitempty"`       // In a paged Collection, indicates the furthest proceeding page of the collection.
-	Items      []interface{}
+	Items      []Object `json:"items,omitempty`
 	Ordered    bool
 }
 
@@ -30,7 +30,7 @@ func (collection *Collection) MarshalJSON() ([]byte, error) {
 
 	if collection.Name != "" {
 		result.WriteString(`"id":`)
-		result.Write()
+		// result.Write()
 	}
 	result.WriteRune('}')
 
