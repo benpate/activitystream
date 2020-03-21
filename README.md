@@ -36,6 +36,13 @@ record := activity.Add(
     object.Collection().Name("John's Blog") // target
 )
 
+return as.New(
+    as.Actor().Name("John Doe").ID("john@doe.com").URL("john.doe.com"),
+    as.Subject().URL("SomethingHere.com"),
+    as.Target().ID("Some.Kind.Of.Target")
+)
+
+
 
 // READING ActivityStreams
 
