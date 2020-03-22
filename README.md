@@ -20,44 +20,23 @@ Something like:
 
 // WRITING ActivityStreams
 
-record := as.Object{
-    "actor": as.Object{
-        "name": "John Connor",
-    },
-    "object": as.Object{
-        "content": "hey-oh",
-    },
-    "target": as.
-}
-
-record := activity.Add(
-    actor.Person().Name("John Connor")),   // actor
-    object.Note().Content("Hey-oh"),        // object
-    object.Collection().Name("John's Blog") // target
+writer.Announce(
+    writer.Actor().Name("John Doe").ID("john@doe.com").URL("john.doe.com"),
+    writer.Document().URL("https://me.website.com/document-name"),
+    nil
 )
-
-return as.New(
-    as.Actor().Name("John Doe").ID("john@doe.com").URL("john.doe.com"),
-    as.Subject().URL("SomethingHere.com"),
-    as.Target().ID("Some.Kind.Of.Target")
-)
-
 
 
 // READING ActivityStreams
 
-activityStreamParser := NewParser()
+	object, err := New(`{
+		"@context": "https://www.w3.org/ns/activitystreams",
+		"name": "Foo",
+		"id": "http://example.org/foo"
+	  }`)
 
-Parser.CustomField("x:customField", func(interface{}) (interface{}, error) {
-	// Parse custom field into any other data structure, and return
-	// it, along with an error (if needed)
-})
-
-// This function will parse the data into a structure.  It works
-// like json.Unmarshal, but uses default and custom field definitions
-// to re-parse fields from all of the crazy formats into a consistent
-// USABLE format for all data elements.
-Parser.Parse(input []byte) (result map[string]interface{}, err error)
+    object.Name() // "foo"
+    object.ID() // "http://example.org/foo"
 
 ```
 
