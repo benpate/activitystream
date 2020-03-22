@@ -1,6 +1,4 @@
-package activitystream
-
-import "bytes"
+package writer
 
 type Collection struct {
 	Context    *Context `json:"@context,omitempty"`
@@ -16,6 +14,7 @@ type Collection struct {
 	Ordered    bool
 }
 
+/*
 func (collection *Collection) MarshalJSON() ([]byte, error) {
 
 	var result bytes.Buffer
@@ -36,3 +35,4 @@ func (collection *Collection) MarshalJSON() ([]byte, error) {
 
 	return result.Bytes(), nil
 }
+*/

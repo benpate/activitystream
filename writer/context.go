@@ -1,9 +1,4 @@
-package activitystream
-
-import (
-	"bytes"
-	"encoding/json"
-)
+package writer
 
 // Context identifies the context within which the object exists or an activity was performed.
 //
@@ -15,6 +10,7 @@ type Context struct {
 	NextContext *Context          // NextContext allows multiple contexts to be defined as a linked list.
 }
 
+/*
 // NewContext represents the standard context defined by the W3C
 func NewContext(vocabulary string, language string) *Context {
 	return &Context{
@@ -106,3 +102,4 @@ func (c *Context) ToJSON() []byte {
 
 	return result.Bytes()
 }
+*/

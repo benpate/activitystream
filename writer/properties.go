@@ -10,14 +10,7 @@ type Property struct {
 
 func id(value string) Property {
 	return Property{
-		name: vocabulary.PropertyID,
+		name:  vocabulary.PropertyID,
 		value: []string{value},
-	}
-}
-
-func type(value string) Property {
-	return Property{
-		name: vocabulary.PropertyType,
-		value: value,
 	}
 }
