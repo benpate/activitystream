@@ -19,7 +19,6 @@ Something like:
 ```go
 
 // WRITING ActivityStreams
-
 writer.Announce(
     writer.Actor().Name("John Doe").ID("john@doe.com").URL("john.doe.com"),
     writer.Document().URL("https://me.website.com/document-name"),
@@ -28,15 +27,14 @@ writer.Announce(
 
 
 // READING ActivityStreams
+object, err := New(`{
+    "@context": "https://www.w3.org/ns/activitystreams",
+    "name": "Foo",
+    "id": "http://example.org/foo"
+    }`)
 
-	object, err := New(`{
-		"@context": "https://www.w3.org/ns/activitystreams",
-		"name": "Foo",
-		"id": "http://example.org/foo"
-	  }`)
-
-    object.Name() // "foo"
-    object.ID() // "http://example.org/foo"
+object.Name() // "foo"
+object.ID() // "http://example.org/foo"
 
 ```
 
