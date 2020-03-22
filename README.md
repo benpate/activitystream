@@ -6,7 +6,7 @@
 This is a personal experiment to explore Activity Streams.  This library is BRAND NEW, and is not ready for use **by anyone**, for **any reason**, at **any time**.  Check out https://github.com/go-fed for a library that's ready for prime time.
 
 
-# OMFG
+# This is an Experiment
 
 ActivityStreams is so hard to work with in a "strongly typed", "idiomatic go" way, because the W3C spec is so loose with types.  While this is *great* for a Javascript, or old ColdFusion programmer, it's super-cumbersome to try to squeeze this into a Go, or TypeScript paradigm.
 
