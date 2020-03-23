@@ -230,10 +230,27 @@ func (object Object) SetProperty(property string, value interface{}) Object {
 // SetMap updates values that may/may-not be multi-language maps.
 func (object Object) SetMap(property string, value string, language string) Object {
 
-	// TODO: Incomplete
+	// If we don't already have a default property, then add it now.
+	if _, ok := object[property]; !ok {
+		object[property] = value
+	}
+
+	// If we don't already have a propertyMap, then add it now
+	propertyMap := property + "Map"
+	if _, ok := object[propertyMap]; !ok {
+		object[propertyMap] = map[string]string{}
+	}
+
+	// Safely set the value of the propertyMap
+	if propertyMap, ok := object[propertyMap].(map[string]string); ok {
+		propertyMap[language] = value
+	}
+
+	// Success!
 	return object
 }
 
+// SetSimpleValue assigns a value to a property with no other shenanigans.
 func (object Object) SetSimpleValue(property string, value interface{}) Object {
 	object[property] = value
 	return object
