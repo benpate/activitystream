@@ -1,8 +1,11 @@
 # ActivityStream 🏞
 
+[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/benpate/ghost)
+[![Go Report Card](https://goreportcard.com/badge/github.com/benpate/ghost?style=flat-square)](https://goreportcard.com/report/github.com/benpate/ghost)
+[![Build Status](http://img.shields.io/travis/benpate/ghost.svg?style=flat-square)](https://travis-ci.org/benpate/ghost)
+[![Codecov](https://img.shields.io/codecov/c/github/benpate/ghost.svg?style=flat-square)](https://codecov.io/gh/benpate/ghost)
+
 ## Welcome to the Fediverse
-
-
 This is a personal experiment to explore Activity Streams.  This library is BRAND NEW, and is not ready for use **by anyone**, for **any reason**, at **any time**.  Check out https://github.com/go-fed for a library that's ready for prime time.
 
 
