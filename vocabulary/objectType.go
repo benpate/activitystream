@@ -19,6 +19,9 @@ const ObjectTypeEvent = "Event"
 // ObjectTypeImage represents an image document of any kind
 const ObjectTypeImage = "Image"
 
+// ObjectTypeMention ???
+const ObjectTypeMention = "Mention"
+
 // ObjectTypeNote represents a short written work typically less than a single paragraph in length.
 const ObjectTypeNote = "Note"
 

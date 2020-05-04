@@ -43,6 +43,14 @@ func New(input interface{}) (*Object, error) {
 	return &object, nil
 }
 
+func NewFromMap(input map[string]interface{}) *Object {
+
+	return &Object{
+		currentRecord: input,
+		nextRecords:   []interface{}{},
+	}
+}
+
 // ID provides the globally unique identifier for an Object or Link
 func (object Object) ID() string {
 	return object.ParseString(vocabulary.PropertyID, "")

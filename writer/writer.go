@@ -3,6 +3,7 @@ package writer
 import (
 	"time"
 
+	"github.com/benpate/activitystream/reader"
 	"github.com/benpate/activitystream/vocabulary"
 )
 
@@ -10,6 +11,11 @@ type Object map[string]interface{}
 
 func NewObject() Object {
 	return Object{}
+}
+
+// Reader converts this writer.Object into a reader.Object
+func (object Object) Reader() *reader.Object {
+	return reader.NewFromMap(object)
 }
 
 // ID provides the globally unique identifier for an Object or Link
