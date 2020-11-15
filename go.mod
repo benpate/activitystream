@@ -1,9 +1,9 @@
 module github.com/benpate/activitystream
 
-go 1.14
+go 1.15
 
 require (
-	github.com/benpate/derp v0.18.0
+	github.com/benpate/derp v0.19.0
 	github.com/davecgh/go-spew v1.1.1
 	github.com/stretchr/testify v1.6.1
 )
