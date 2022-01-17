@@ -1,4 +1,4 @@
-package vocabulary
+package pub
 
 const ActorTypeApplication = "Application"
 

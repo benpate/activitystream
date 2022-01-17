@@ -1,4 +1,4 @@
-module github.com/benpate/activitystream
+module github.com/benpate/pub
 
 go 1.15
 
