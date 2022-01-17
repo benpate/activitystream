@@ -1,55 +1,55 @@
 package writer
 
-import "github.com/benpate/activitystream/vocabulary"
+import "github.com/benpate/pub"
 
 func Article() Object {
-	return NewObject().Type(vocabulary.ObjectTypeArticle)
+	return NewObject().Type(pub.ObjectTypeArticle)
 }
 
 func Audio() Object {
-	return NewObject().Type(vocabulary.ObjectTypeAudio)
+	return NewObject().Type(pub.ObjectTypeAudio)
 }
 
 func Document() Object {
-	return NewObject().Type(vocabulary.ObjectTypeDocument)
+	return NewObject().Type(pub.ObjectTypeDocument)
 }
 
 func Event() Object {
-	return NewObject().Type(vocabulary.ObjectTypeEvent)
+	return NewObject().Type(pub.ObjectTypeEvent)
 }
 
 func Image() Object {
-	return NewObject().Type(vocabulary.ObjectTypeImage)
+	return NewObject().Type(pub.ObjectTypeImage)
 }
 
 func Note() Object {
-	return NewObject().Type(vocabulary.ObjectTypeNote)
+	return NewObject().Type(pub.ObjectTypeNote)
 }
 
 func Page() Object {
-	return NewObject().Type(vocabulary.ObjectTypePage)
+	return NewObject().Type(pub.ObjectTypePage)
 }
 
 func Place() Object {
-	return NewObject().Type(vocabulary.ObjectTypePlace)
+	return NewObject().Type(pub.ObjectTypePlace)
 }
 
 func Profile() Object {
-	return NewObject().Type(vocabulary.ObjectTypeProfile)
+	return NewObject().Type(pub.ObjectTypeProfile)
 }
 
 func Relationship() Object {
-	return NewObject().Type(vocabulary.ObjectTypeRelationship)
+	return NewObject().Type(pub.ObjectTypeRelationship)
 }
 
 func Tombstone() Object {
-	return NewObject().Type(vocabulary.ObjectTypeTombstone)
+	return NewObject().Type(pub.ObjectTypeTombstone)
 }
 
 func Video() Object {
-	return NewObject().Type(vocabulary.ObjectTypeVideo)
+	return NewObject().Type(pub.ObjectTypeVideo)
 }
 
 func Mention() Object {
-	return NewObject().Type(vocabulary.ObjectTypeMention)
+	return NewObject().Type(pub.ObjectTypeMention)
 }
