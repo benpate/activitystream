@@ -2,7 +2,6 @@ package reader
 
 import (
 	"testing"
-	"time"
 
 	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/assert"
@@ -172,7 +171,8 @@ func TestName2(t *testing.T) {
 
 }
 
-func xTestDuration1(t *testing.T) {
+/*
+func TestDuration1(t *testing.T) {
 
 	object, err := New(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
@@ -186,3 +186,4 @@ func xTestDuration1(t *testing.T) {
 	assert.Equal(t, object.Type(), "Video")
 	assert.Equal(t, object.Duration(), time.Duration(5*time.Second))
 }
+*/

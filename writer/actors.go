@@ -1,33 +1,33 @@
 package writer
 
-import "github.com/benpate/activitystream/vocabulary"
+import "github.com/benpate/pub"
 
 func Application(name string, language string) Object {
 	return NewObject().
-		Type(vocabulary.ActorTypeApplication).
+		Type(pub.ActorTypeApplication).
 		Name(name, language)
 }
 
 func Group(name string, language string) Object {
 	return NewObject().
-		Type(vocabulary.ActorTypeGroup).
+		Type(pub.ActorTypeGroup).
 		Name(name, language)
 }
 
 func Organization(name string, language string) Object {
 	return NewObject().
-		Type(vocabulary.ActorTypeOrganization).
+		Type(pub.ActorTypeOrganization).
 		Name(name, language)
 }
 
 func Person(name string, language string) Object {
 	return NewObject().
-		Type(vocabulary.ActorTypePerson).
+		Type(pub.ActorTypePerson).
 		Name(name, language)
 }
 
 func Service(name string, language string) Object {
 	return NewObject().
-		Type(vocabulary.ActorTypeService).
+		Type(pub.ActorTypeService).
 		Name(name, language)
 }
