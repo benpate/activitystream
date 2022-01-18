@@ -1,10 +1,10 @@
-# Pub 🏞
+# Pub 📰
 
-[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](https://pkg.go.dev/github.com/benpate/activitystream)
-[![Go Report Card](https://goreportcard.com/badge/github.com/benpate/activitystream?style=flat-square)](https://goreportcard.com/report/github.com/benpate/activitystream)
-[![Build Status](http://img.shields.io/travis/benpate/activitystream.svg?style=flat-square)](https://travis-ci.com/benpate/activitystream)
-[![Codecov](https://img.shields.io/codecov/c/github/benpate/activitystream.svg?style=flat-square)](https://codecov.io/gh/benpate/activitystream)
-![Version](https://img.shields.io/github/v/release/benpate/activitystream?include_prereleases&style=flat-square&color=brightgreen)
+[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/benpate/pub)
+[![Build Status](http://img.shields.io/travis/benpate/pub.svg?style=flat-square)](https://travis-ci.org/benpate/pub)
+[![Codecov](https://img.shields.io/codecov/c/github/benpate/pub.svg?style=flat-square)](https://codecov.io/gh/benpate/pub)
+[![Go Report Card](https://goreportcard.com/badge/github.com/benpate/pub?style=flat-square)](https://goreportcard.com/report/github.com/benpate/pub)
+![Version](https://img.shields.io/github/v/release/benpate/pub?include_prereleases&style=flat-square&color=brightgreen)
 
 ## Welcome to the Fediverse
 This is a personal experiment to explore Activity Streams.  This library is BRAND NEW, and is not ready for use **by anyone**, for **any reason**, at **any time**.  Check out https://github.com/go-fed for a library that's ready for prime time.
@@ -44,4 +44,4 @@ object.ID() // "http://example.org/foo"
 
 ## Pull Requests Welcome
 
-This library is a work in progress, and will benefit from your experience reports, use cases, and contributions.  If you have an idea for making Rosetta better, send in a pull request.  We're all in this together! 🏞
+This library is a work in progress, and will benefit from your experience reports, use cases, and contributions.  If you have an idea for making this library better, send in a pull request.  We're all in this together! 📰
