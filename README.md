@@ -1,10 +1,10 @@
 # Pub 📰
 
-[![GoDoc](http://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://godoc.org/github.com/benpate/pub)
-[![Build Status](http://img.shields.io/travis/benpate/pub.svg?style=flat-square)](https://travis-ci.org/benpate/pub)
-[![Codecov](https://img.shields.io/codecov/c/github/benpate/pub.svg?style=flat-square)](https://codecov.io/gh/benpate/pub)
-[![Go Report Card](https://goreportcard.com/badge/github.com/benpate/pub?style=flat-square)](https://goreportcard.com/report/github.com/benpate/pub)
-![Version](https://img.shields.io/github/v/release/benpate/pub?include_prereleases&style=flat-square&color=brightgreen)
+[![GoDoc](https://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://pkg.go.dev/github.com/whisperverse/pub)
+[![Build Status](https://img.shields.io/github/workflow/status/whisperverse/pub/Go/master)](https://github.com/whisperverse/pub/actions/workflows/go.yml)
+[![Codecov](https://img.shields.io/codecov/c/github/whisperverse/pub.svg?style=flat-square)](https://codecov.io/gh/whisperverse/pub)
+[![Go Report Card](https://goreportcard.com/badge/github.com/whisperverse/pub?style=flat-square)](https://goreportcard.com/report/github.com/whisperverse/pub)
+[![Version](https://img.shields.io/github/v/release/whisperverse/pub?include_prereleases&style=flat-square&color=brightgreen)](https://github.com/whisperverse/pub/releases)
 
 ## Welcome to the Fediverse
 
