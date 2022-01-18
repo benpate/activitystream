@@ -2,7 +2,7 @@ package vocabulary
 
 // These types are defined by the W3C on https://www.w3.org/TR/activitystreams-vocabulary/#object-types
 
-/**** Object Types ****/
+/**** Activity Types ****/
 
 // ActivityTypeAccept description is TBD
 const ActivityTypeAccept = "Accept"
