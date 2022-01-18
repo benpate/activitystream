@@ -1,6 +1,6 @@
 module github.com/benpate/activitystream
 
-go 1.15
+go 1.17
 
 require (
 	github.com/benpate/derp v0.22.2
