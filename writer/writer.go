@@ -3,8 +3,8 @@ package writer
 import (
 	"time"
 
-	"github.com/benpate/pub"
-	"github.com/benpate/pub/reader"
+	"github.com/whisperverse/pub"
+	"github.com/whisperverse/pub/reader"
 )
 
 type Object map[string]interface{}

@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/benpate/derp"
-	"github.com/benpate/pub"
+	"github.com/whisperverse/pub"
 )
 
 // Object is a data structure that makes it easy(-er) to read and understand data from an ActivityStream JSON package.

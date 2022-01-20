@@ -1,6 +1,6 @@
 package writer
 
-import "github.com/benpate/pub"
+import "github.com/whisperverse/pub"
 
 func Application(name string, language string) Object {
 	return NewObject().

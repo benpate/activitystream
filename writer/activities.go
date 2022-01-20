@@ -1,6 +1,6 @@
 package writer
 
-import "github.com/benpate/pub"
+import "github.com/whisperverse/pub"
 
 // Accept
 func Accept(actor Object, object Object) Object {
