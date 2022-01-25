@@ -2,13 +2,11 @@ module github.com/whisperverse/activitystream
 
 go 1.17
 
-replace github.com/whisperverse/jsonld => ../jsonld
-
 require (
 	github.com/benpate/derp v0.22.2
 	github.com/davecgh/go-spew v1.1.1
 	github.com/stretchr/testify v1.7.0
-	github.com/whisperverse/jsonld v0.0.0
+	github.com/whisperverse/json-ld v0.2.0
 )
 
 require (

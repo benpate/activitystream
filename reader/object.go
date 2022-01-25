@@ -6,7 +6,7 @@ import (
 
 	"github.com/benpate/derp"
 	as "github.com/whisperverse/activitystream"
-	"github.com/whisperverse/jsonld/reader"
+	"github.com/whisperverse/json-ld/reader"
 )
 
 // Object is a data structure that makes it easy(-er) to read and understand data from an ActivityStream JSON package.
