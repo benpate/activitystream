@@ -3,13 +3,12 @@ package reader
 import (
 	"testing"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestID(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"name": "Foo",
 		"id": "http://example.org/foo"
@@ -21,7 +20,7 @@ func TestID(t *testing.T) {
 
 func TestType1(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"summary": "A foo",
 		"type": "http://example.org/Foo"
@@ -34,7 +33,7 @@ func TestType1(t *testing.T) {
 
 func TestType2(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"summary": "A foo",
 		"type": ["first", "second", "third"]
@@ -47,7 +46,7 @@ func TestType2(t *testing.T) {
 
 func TestActor1(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"summary": "Sally offered the Foo object",
 		"type": "Offer",
@@ -56,26 +55,18 @@ func TestActor1(t *testing.T) {
 	  }`)
 
 	assert.Nil(t, err)
-	assert.Equal(t, object.Actor(), "http://sally.example.org")
+	assert.Equal(t, "http://sally.example.org", object.Actor())
 
-	t.Log(spew.Sdump(object))
-
-	actor, ok := object.ActorObject()
-
-	if !ok {
-		t.Fail()
-		return
-	}
-
-	assert.Equal(t, actor.Type(), "")
-	assert.Equal(t, actor.ID(), "http://sally.example.org")
+	actor := object.ActorObject()
+	assert.Equal(t, "", actor.Type())
+	assert.Equal(t, "http://sally.example.org", actor.ID())
 	assert.Equal(t, actor.Summary(), "")
-	assert.Equal(t, actor.Summary("es"), "")
+	assert.Equal(t, "", actor.Summary("es"))
 }
 
 func TestActor2(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"summary": "Sally offered the Foo object",
 		"type": "Offer",
@@ -90,15 +81,7 @@ func TestActor2(t *testing.T) {
 	assert.Nil(t, err)
 	assert.Equal(t, object.Actor(), "http://sally.example.org")
 
-	t.Log(spew.Sdump(object))
-
-	actor, ok := object.ActorObject()
-
-	if !ok {
-		t.Fail()
-		return
-	}
-
+	actor := object.ActorObject()
 	assert.Equal(t, actor.Type(), "Person")
 	assert.Equal(t, actor.ID(), "http://sally.example.org")
 	assert.Equal(t, actor.Summary(), "Sally")
@@ -107,7 +90,7 @@ func TestActor2(t *testing.T) {
 
 func TestAttachment(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"type": "Note",
 		"name": "Have you seen my cat?",
@@ -120,16 +103,12 @@ func TestAttachment(t *testing.T) {
 		]
 	  }`)
 
-	attachment, ok := object.AttachmentObject()
-	t.Log(spew.Sdump(object))
-	t.Log(spew.Sdump(attachment))
-
 	assert.Nil(t, err)
 	assert.Equal(t, "Note", object.Type())
 	assert.Equal(t, "Have you seen my cat?", object.Name())
 	assert.Equal(t, "http://example.org/cat.jpeg", object.Attachment())
 
-	assert.True(t, ok)
+	attachment := object.AttachmentObject()
 	assert.Equal(t, "Image", attachment.Type())
 	assert.Equal(t, "This is what he looks like.", attachment.Content())
 	assert.Equal(t, "http://example.org/cat.jpeg", attachment.URL())
@@ -137,7 +116,7 @@ func TestAttachment(t *testing.T) {
 
 func TestName1(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"type": "Note",
 		"name": "A simple note"
@@ -152,7 +131,7 @@ func TestName1(t *testing.T) {
 
 func TestName2(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"type": "Note",
 		"nameMap": {
@@ -174,7 +153,7 @@ func TestName2(t *testing.T) {
 /*
 func TestDuration1(t *testing.T) {
 
-	object, err := New(`{
+	object, err := UnmarshalJSON(`{
 		"@context": "https://www.w3.org/ns/activitystreams",
 		"type": "Video",
 		"name": "Birds Flying",

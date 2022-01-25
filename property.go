@@ -1,4 +1,4 @@
-package pub
+package activitystream
 
 // These types are defined by the W3C on https://www.w3.org/TR/activitystreams-vocabulary/#properties
 

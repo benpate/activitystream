@@ -1,4 +1,4 @@
-package pub
+package activitystream
 
 const ActorTypeApplication = "Application"
 

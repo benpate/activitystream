@@ -1,10 +1,10 @@
 # Pub 🏞
 
-[![GoDoc](https://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://pkg.go.dev/github.com/whisperverse/pub)
-[![Build Status](https://img.shields.io/github/workflow/status/whisperverse/pub/Go/main)](https://github.com/whisperverse/pub/actions/workflows/go.yml)
+[![GoDoc](https://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://pkg.go.dev/github.com/whisperverse/activitystream)
+[![Build Status](https://img.shields.io/github/workflow/status/whisperverse/pub/Go/main)](https://github.com/whisperverse/activitystream/actions/workflows/go.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/whisperverse/pub.svg?style=flat-square)](https://codecov.io/gh/whisperverse/pub)
-[![Go Report Card](https://goreportcard.com/badge/github.com/whisperverse/pub?style=flat-square)](https://goreportcard.com/report/github.com/whisperverse/pub)
-[![Version](https://img.shields.io/github/v/release/whisperverse/pub?include_prereleases&style=flat-square&color=brightgreen)](https://github.com/whisperverse/pub/releases)
+[![Go Report Card](https://goreportcard.com/badge/github.com/whisperverse/activitystream?style=flat-square)](https://goreportcard.com/report/github.com/whisperverse/activitystream)
+[![Version](https://img.shields.io/github/v/release/whisperverse/pub?include_prereleases&style=flat-square&color=brightgreen)](https://github.com/whisperverse/activitystream/releases)
 
 ## Welcome to the Fediverse
 
