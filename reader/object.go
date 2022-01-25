@@ -311,13 +311,13 @@ func (object Object) URLObject() Object {
 }
 
 // To identifies an entity considered to be part of the public primary audience of an Object
-func (object Object) To() string {
-	return object.Property(as.PropertyTo).AsString(as.PropertyID)
+func (object Object) To() []string {
+	return object.Property(as.PropertyTo).AsSliceOfString(as.PropertyID)
 }
 
 // ToObject returns a fully object for the "To" property
-func (object Object) ToObject() Object {
-	return FromJSONLD(object.Property(as.PropertyTo).AsObject(as.PropertyID))
+func (object Object) ToObjects() []Object {
+	return SliceFromJSONLD(object.Property(as.PropertyTo).AsSliceOfObject(as.PropertyID))
 }
 
 // MediaType identifies the MIME media type of the referenced resource.  When used on an Object, identifies the MIME media type of the value of the content property. If not specified, the content property is assumed to contain text/html content.
