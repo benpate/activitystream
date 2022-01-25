@@ -3,6 +3,7 @@ package reader
 import (
 	"testing"
 
+	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -147,7 +148,33 @@ func TestName2(t *testing.T) {
 	assert.Equal(t, object.Name("en"), "A simple note")
 	assert.Equal(t, object.Name("es"), "Una nota sencilla")
 	assert.Equal(t, object.Name("zh-Hans"), "一段简单的笔记")
+}
 
+func TestBadJSON(t *testing.T) {
+	_, err := UnmarshalJSON(`this is not valid json`)
+	assert.NotNil(t, err)
+}
+
+func TestAllRecipients(t *testing.T) {
+
+	object, err := UnmarshalJSON(`{
+		"@context": "https://www.w3.org/ns/activitystreams",
+		"summary": "A foo",
+		"type": "http://example.org/Foo",
+		"to": ["michael@jackson.com", "https://tito.jackson.com"],
+		"bto": {
+			"type": "Actor",
+			"id": "https://kendall.jackson.com"
+		},
+		"cc": "andrew@jackson.com"
+	  }`)
+
+	assert.Nil(t, err)
+
+	spew.Dump(object.To())
+
+	identities := []string{"michael@jackson.com", "https://tito.jackson.com", "https://kendall.jackson.com", "andrew@jackson.com"}
+	assert.Equal(t, identities, object.AllRecipients())
 }
 
 /*

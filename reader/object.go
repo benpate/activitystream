@@ -16,6 +16,10 @@ type Object struct {
 	reader.JSONLD
 }
 
+/**************************
+ * Constructors
+ **************************/
+
 // New converts the provided input into a fully initialized Object reference.
 func New(input interface{}) Object {
 	return FromJSONLD(reader.New(input))
@@ -26,7 +30,7 @@ func UnmarshalJSON(input string) (Object, error) {
 	var result Object
 
 	if err := json.Unmarshal([]byte(input), &result); err != nil {
-		return result, derp.Wrap(err, "activitystream.reader.ParseJSON", "Error parsing JSON input", input)
+		return New(""), derp.Wrap(err, "activitystream.reader.ParseJSON", "Error parsing JSON input", input)
 	}
 
 	return result, nil
@@ -47,6 +51,10 @@ func SliceFromJSONLD(input []reader.JSONLD) []Object {
 
 	return result
 }
+
+/**************************
+ * ActivityPub Properties
+ **************************/
 
 // ID provides the globally unique identifier for an Object or Link
 func (object Object) ID() string {
@@ -350,6 +358,27 @@ func (object Object) Width() int {
 	return object.Property(as.PropertyWidth).AsInt("")
 }
 
+/**************************
+ * Non-Standard Accessors
+ **************************/
+
+// AllRecipients collects all recipients across (to, bto, cc, bcc) into a single slice
+func (object Object) AllRecipients() []string {
+	result := make([]string, 0)
+
+	result = append(result, object.To()...)
+	result = append(result, object.BTo()...)
+	result = append(result, object.Cc()...)
+	result = append(result, object.Bcc()...)
+
+	return result
+}
+
+/**************************
+ * Other Utilities
+ **************************/
+
+// UnmarshalJSON implements the json.Unmarshaller interface
 func (object *Object) UnmarshalJSON(input []byte) error {
 
 	const location = "activitystream.reader.UnmarshalJSON"
