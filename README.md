@@ -1,4 +1,4 @@
-# Pub 🏞
+# ActivityStream 🏞
 
 [![GoDoc](https://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://pkg.go.dev/github.com/whisperverse/activitystream)
 [![Build Status](https://img.shields.io/github/workflow/status/whisperverse/pub/Go/main)](https://github.com/whisperverse/activitystream/actions/workflows/go.yml)
