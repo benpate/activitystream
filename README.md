@@ -1,4 +1,4 @@
-# Pub 📰
+# Pub 🏞
 
 [![GoDoc](https://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://pkg.go.dev/github.com/whisperverse/pub)
 [![Build Status](https://img.shields.io/github/workflow/status/whisperverse/pub/Go/main)](https://github.com/whisperverse/pub/actions/workflows/go.yml)
@@ -43,4 +43,4 @@ object.ID() // "http://example.org/foo"
 
 ## Pull Requests Welcome
 
-This library is a work in progress, and will benefit from your experience reports, use cases, and contributions.  If you have an idea for making this library better, send in a pull request.  We're all in this together! 📰
+This library is a work in progress, and will benefit from your experience reports, use cases, and contributions.  If you have an idea for making this library better, send in a pull request.  We're all in this together! 🏞
