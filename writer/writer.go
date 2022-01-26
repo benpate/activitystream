@@ -230,10 +230,12 @@ func (object Object) Property(property string, value interface{}) Object {
 // Map updates values that may/may-not be multi-language maps.
 func (object Object) Map(property string, value string, language string) Object {
 
+	// If property is empty, do not change
 	if property == "" {
 		return object
 	}
 
+	// If value is empty, then do not change
 	if value == "" {
 		return object
 	}
@@ -243,6 +245,12 @@ func (object Object) Map(property string, value string, language string) Object 
 		object[property] = value
 	}
 
+	// If language is empty, then do not put an entry in the map
+	if language == "" {
+		return object
+	}
+
+	// Otherwise, add an entry into the language map, too.
 	// If we don't already have a propertyMap, then add it now
 	propertyMap := property + "Map"
 	if _, ok := object[propertyMap]; !ok {
