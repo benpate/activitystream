@@ -221,7 +221,7 @@ func (object Object) Property(property string, value interface{}) Object {
 
 	default:
 		// Otherwise, make a new array, and append to it.
-		// object[key] = []interface{current, value}
+		object[property] = []interface{}{current, value}
 	}
 
 	return object
@@ -229,6 +229,14 @@ func (object Object) Property(property string, value interface{}) Object {
 
 // Map updates values that may/may-not be multi-language maps.
 func (object Object) Map(property string, value string, language string) Object {
+
+	if property == "" {
+		return object
+	}
+
+	if value == "" {
+		return object
+	}
 
 	// If we don't already have a default property, then add it now.
 	if _, ok := object[property]; !ok {
