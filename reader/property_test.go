@@ -3,7 +3,6 @@ package reader
 import (
 	"testing"
 
-	"github.com/davecgh/go-spew/spew"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -170,8 +169,6 @@ func TestAllRecipients(t *testing.T) {
 	  }`)
 
 	assert.Nil(t, err)
-
-	spew.Dump(object.To())
 
 	identities := []string{"michael@jackson.com", "https://tito.jackson.com", "https://kendall.jackson.com", "andrew@jackson.com"}
 	assert.Equal(t, identities, object.AllRecipients())

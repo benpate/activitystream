@@ -11,8 +11,6 @@ func TestExample1(t *testing.T) {
 	note := Note().
 		Summary("A note", "en_US").
 		Content("My dog has fleas.", "en_US")
-
-	spew.Dump(note)
 }
 
 func TestExample2(t *testing.T) {
@@ -22,8 +20,6 @@ func TestExample2(t *testing.T) {
 		Content("My dog has fleas.", "en_US")
 	// ExtProperty("ext", "nose", 0).
 	// ExtProperty("ext", "smell", "terrible")
-
-	spew.Dump(note)
 }
 
 func TestExample3(t *testing.T) {
