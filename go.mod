@@ -1,6 +1,6 @@
 module github.com/whisperverse/activitystream
 
-go 1.17
+go 1.18
 
 require (
 	github.com/benpate/derp v0.22.2
