@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/benpate/derp v0.23.0
 	github.com/stretchr/testify v1.7.4
-	github.com/whisperverse/json-ld v0.3.0
+	github.com/whisperverse/json-ld v0.4.0
 )
 
 require (
