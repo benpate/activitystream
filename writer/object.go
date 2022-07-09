@@ -1,6 +1,6 @@
 package writer
 
-import pub "github.com/whisperverse/activitystream"
+import pub "github.com/benpate/activitystream"
 
 func Article() Object {
 	return NewObject().Type(pub.ObjectTypeArticle)

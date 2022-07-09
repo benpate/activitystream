@@ -1,6 +1,6 @@
 package writer
 
-import pub "github.com/whisperverse/activitystream"
+import pub "github.com/benpate/activitystream"
 
 func Application(name string, language string) Object {
 	return NewObject().

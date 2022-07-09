@@ -3,7 +3,7 @@ package writer
 import (
 	"time"
 
-	as "github.com/whisperverse/activitystream"
+	as "github.com/benpate/activitystream"
 )
 
 type Object map[string]interface{}

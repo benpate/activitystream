@@ -1,6 +1,6 @@
 package writer
 
-import pub "github.com/whisperverse/activitystream"
+import pub "github.com/benpate/activitystream"
 
 // Accept
 func Accept(actor Object, object Object) Object {
