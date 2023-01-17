@@ -3,7 +3,7 @@ module github.com/benpate/activitystream
 go 1.18
 
 require (
-	github.com/benpate/derp v0.25.0
+	github.com/benpate/derp v0.26.0
 	github.com/benpate/json-ld v0.6.0
 	github.com/stretchr/testify v1.8.1
 )
