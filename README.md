@@ -12,13 +12,9 @@ This is a personal experiment to explore Activity Streams.  This library is BRAN
 
 ## This is an Experiment
 
-ActivityStreams is so hard to work with in a "strongly typed", "idiomatic go" way, because the W3C spec is so loose with types.  While this is *great* for a Javascript, or old ColdFusion programmer, it's super-cumbersome to try to squeeze this into a Go, or TypeScript paradigm.
+ActivityStreams is so hard to work with in a "strongly typed", "idiomatic go" way, because the W3C spec is so loose with types.  So, I'm revisiting this idea of loosely typed data that's encapsulated by strongly typed constructors.  This technique works great with databases like MongoDB, so I'm giving it another go for ActivityStreams.  This (may?) also help with extendability, as new constructors can be defined outside of the primary Activity Vocabulary.
 
-So, here's the idea (for now).  EVERYTHING is *stored* as a `map[string]interface{}`, which is as big of a no-no as using Reflect.  But, it's the only way to support the entire spec without doing [this](https://github.com/go-fed/activity/blob/master/streams/vocab/gen_type_activitystreams_accept_interface.go).
-
-Consistency will be "enforced" (or at least *encouraged*) using constructor functions that can construct these data structures in a "proper" way, and validator functions that can accept (nearly) any input, and then format it in a consistent manner.
-
-Something like:
+There are separate libraries for Reading and Writing ActivityStreams data.  They will work something like this:
 
 ```go
 
