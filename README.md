@@ -1,7 +1,7 @@
 # ActivityStream 🏞
 
 [![GoDoc](https://img.shields.io/badge/go-documentation-blue.svg?style=flat-square)](http://pkg.go.dev/github.com/benpate/activitystream)
-[![Build Status](https://img.shields.io/github/workflow/status/benpate/pub/Go/main)](https://github.com/benpate/activitystream/actions/workflows/go.yml)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/benpate/activitystream/go.yml?branch=main)](https://github.com/benpate/activitystream/actions/workflows/go.yml)
 [![Codecov](https://img.shields.io/codecov/c/github/benpate/pub.svg?style=flat-square)](https://codecov.io/gh/benpate/pub)
 [![Go Report Card](https://goreportcard.com/badge/github.com/benpate/activitystream?style=flat-square)](https://goreportcard.com/report/github.com/benpate/activitystream)
 [![Version](https://img.shields.io/github/v/release/benpate/pub?include_prereleases&style=flat-square&color=brightgreen)](https://github.com/benpate/activitystream/releases)
